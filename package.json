@@ -1,0 +1,34 @@
+{
+  "name": "api-patient",
+  "version": "1.0.0",
+  "description": "Patient administration.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "sebas663",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sebas663/api-patient.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "compression": "^1.6.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "express-route-validator": "^0.2.5",
+    "mongoose": "^4.10.0",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "^1.8.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chai-by-proxy": "^0.1.1",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.1",
+    "mockgoose": "^7.3.1"
+  }
+}
