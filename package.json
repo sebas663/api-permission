@@ -1,7 +1,7 @@
 {
-  "name": "api-patient",
+  "name": "api-permission",
   "version": "1.0.0",
-  "description": "Patient administration.",
+  "description": "Permission CRUD administration.",
   "main": "server.js",
   "scripts": {
     "test": "mocha",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sebas663/api-patient.git"
+    "url": "git://github.com/sebas663/api-permission.git"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
