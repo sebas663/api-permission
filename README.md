@@ -4,8 +4,8 @@ This is a simple CRUD Api for types of permissions of the app.
 
 ## Installation
 In git bash<br />
-git clone https://github.com/sebas663/api-permission.git<br />
-cd root folder ~ api-permission<br />
+git clone https://github.com/sebas663/api-permissionType.git<br />
+cd root folder ~ api-permissionType<br />
 npm install
 
 ## API Reference
@@ -19,5 +19,5 @@ PUT<br />
 DELETE
 
 ## Tests
-In git bash in root folder ~ api-permission:<br />
+In git bash in root folder ~ api-permissionType:<br />
 npm test
