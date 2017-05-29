@@ -13,10 +13,9 @@ npm install
 http://ip:port/api/{version}/permissions<br />
 GET<br />
 POST<br />
-http://ip:port/api/{version}/permission<br />
 GET:id<br />
-PUT<br />
-DELETE
+PUT:id<br />
+DELETE:id
 
 ## Tests
 In git bash in root folder ~ api-permissionType:<br />

@@ -5,18 +5,15 @@ var Permission   = require('../models/permissionType');
 //Require the dev-dependencies
 var chai         = require('chai');
 var chaiHttp     = require('chai-http');
-//var chaiAsPromised = require("chai-as-promised");
-//var server      =   require('../server');
-var server       = 'http://localhost:4200';
-// Add promise support if this does not exist natively.
 
-//chai.use(chaiAsPromised);
 chai.use(chaiHttp);
 
 var should = chai.should();
 
 //For work whit environment variable.
 require('dotenv').config();
+
+var server  = process.env.API_LOCALHOST;
 
 describe('Permissions', () => {
     beforeEach(() => {
@@ -27,7 +24,7 @@ describe('Permissions', () => {
   describe('/GET permissions', () => {
       it('it should GET all the permissions', () => {
              chai.request(server)
-            .get('/api/' + process.env.API_VERSION + '/permissions')
+            .get(process.env.API_RESOURCE)
             .then(function (res) {
                 expect(res).to.have.status(200);
                 expect(res.body).to.be.a('array');
@@ -45,7 +42,7 @@ describe('Permissions', () => {
                 code: "MEDICO"
             }
             chai.request(server)
-            .post('/api/' + process.env.API_VERSION + '/permissions')
+            .post(process.env.API_RESOURCE)
             .send(permission)
             .then(function (res) {
                 expect(res).to.have.status(200);
@@ -63,7 +60,7 @@ describe('Permissions', () => {
                 description: "Medico"
             }
             chai.request(server)
-            .post('/api/' + process.env.API_VERSION + '/permissions')
+            .post(process.env.API_RESOURCE)
             .send(permission)
             .then(function (res) {
                 expect(res).to.have.status(200);
@@ -86,7 +83,7 @@ describe('Permissions', () => {
                             });
         permission.save((err, permission) => {
             chai.request(server)
-            .get('/api/' + process.env.API_VERSION + '/permissions/' + permission.id)
+            .get(process.env.API_RESOURCE + '/' + permission.id)
             .send(permission)
             .then(function (res) {
                 expect(res).to.have.status(200);
@@ -111,7 +108,7 @@ describe('Permissions', () => {
                             })
         permission.save((err, permission) => {
                 chai.request(server)
-                .put('/api/' + process.env.API_VERSION + '/permissions/' + permission.id)
+                .put(process.env.API_RESOURCE + '/' + permission.id)
                 .send({ code: "MEDICOP",
                         description: "Medico pediatrico"
                     })
@@ -138,7 +135,7 @@ describe('Permissions', () => {
                             })
         permission.save((err, permission) => {
                 chai.request(server)
-                .DELETE('/api/' + process.env.API_VERSION + '/permissions/' + permission.id)
+                .DELETE(process.env.API_RESOURCE + '/' + permission.id)
                 .then(function (res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('object');

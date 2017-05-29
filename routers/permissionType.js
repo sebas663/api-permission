@@ -48,7 +48,7 @@ router.route('/permissions')
         }
   );
 
-router.route('/permission/:idPermission')
+router.route('/permissions/:idPermission')
   .get(validator.validate({
           params: {
             idPermission: { isRequired: true , isMongoId: true }
