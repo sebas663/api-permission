@@ -1,4 +1,4 @@
-## api-permission
+## api-permissionType
 
 This is a simple CRUD Api for types of permissions of the app.
 
