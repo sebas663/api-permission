@@ -1,5 +1,5 @@
 {
-  "name": "api-permission",
+  "name": "api-permission-type",
   "version": "1.0.0",
   "description": "Permission CRUD administration.",
   "main": "server.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sebas663/api-permission.git"
+    "url": "git://github.com/sebas663/api-permissionType.git"
   },
   "dependencies": {
     "body-parser": "^1.13.3",

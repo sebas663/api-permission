@@ -4,7 +4,7 @@ var app         =   express();
 var bodyParser  =   require("body-parser");
 var mongoose    =   require('mongoose');
 var morgan      =   require('morgan');
-var permissionRoute =   require('./routers/permission');
+var permissionRoute =   require('./routers/permissionType');
 //For work whit environment variable.
 require('dotenv').config();
 
