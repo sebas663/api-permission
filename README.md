@@ -1,6 +1,6 @@
 ## api-permission
 
-This is a simple CRUD Api for types of documents of identity.
+This is a simple CRUD Api for types of permissions of the app.
 
 ## Installation
 In git bash<br />
